@@ -1,0 +1,30 @@
+:root {
+  --color-primary:          #1E3A8A;
+  --color-primary-light:    #3B82F6;
+  --color-primary-btn:      #2563EB;
+  --color-secondary:        #0F766E;
+  --color-secondary-light:  #14B8A6;
+  --color-bg:               #F8FAFC;
+  --color-surface:          #FFFFFF;
+  --color-text:             #1E293B;
+  --color-text-secondary:   #64748B;
+  --color-text-body:        #475569;
+  --color-border:           #E2E8F0;
+  --color-active-bg:        #DBEAFE;
+  --color-success:          #16A34A;
+  --color-warning:          #F59E0B;
+  --color-error:            #DC2626;
+  --color-info:             #0284C7;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: var(--color-bg);
+  color: var(--color-text-body);
+}

@@ -1,0 +1,60 @@
+<div class="app-shell">
+
+  <!-- Sidebar -->
+  <aside class="sidebar" [class.collapsed]="isSidebarCollapsed">
+    <div class="sidebar-logo">
+      <span class="logo-text">EmpMgmt</span>
+    </div>
+    <nav class="sidebar-nav">
+      <a class="nav-item active" href="#">
+        <span class="nav-icon">&#9632;</span>
+        Dashboard
+      </a>
+      <a class="nav-item" href="#">
+        <span class="nav-icon">&#9632;</span>
+        Employees
+      </a>
+      <a class="nav-item" href="#">
+        <span class="nav-icon">&#9632;</span>
+        Departments
+      </a>
+      <a class="nav-item" href="#">
+        <span class="nav-icon">&#9632;</span>
+        Projects
+      </a>
+      <a class="nav-item" href="#">
+        <span class="nav-icon">&#9632;</span>
+        Assignments
+      </a>
+    </nav>
+  </aside>
+
+  <!-- Main area -->
+  <div class="main-area">
+
+    <!-- Top Navbar -->
+    <header class="navbar">
+      <button class="toggle-btn" title="Toggle Sidebar" (click)="isSidebarCollapsed = !isSidebarCollapsed">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <span class="navbar-title">Employee Management</span>
+
+      <div class="navbar-right">
+        <div class="user-info">
+          <div class="user-avatar">{{ avatarLetter }}</div>
+          <span class="user-name">{{ loggedInUser?.employeeName }}</span>
+        </div>
+        <button class="btn-logout" (click)="logout()">Logout</button>
+      </div>
+    </header>
+
+    <!-- Page Content -->
+    <main class="page-content">
+        <router-outlet></router-outlet>
+    </main>
+
+  </div>
+</div>
